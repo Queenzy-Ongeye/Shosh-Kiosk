@@ -55,7 +55,7 @@ const User = () => {
 
 
             <div className="container">
-                <h2>Fonts</h2>
+                <h2 className='font'>Fonts</h2>
 
                 <div className="letters">
                     <div className="one">
@@ -69,7 +69,7 @@ const User = () => {
                     </div>
                 </div>
 
-                <h2>Colors</h2>
+                <h2 className='font'>Colors</h2>
                 <div className="colors">
                     <div className="color">
                         <div className="color-two"></div>
@@ -81,7 +81,7 @@ const User = () => {
                         #469DA4
                     </div>
 
-                    <div className="color-four">
+                    <div className="color">
                         <div className="color-four"></div>
                         #6B6B6B
                     </div>

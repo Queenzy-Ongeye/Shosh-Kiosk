@@ -85,10 +85,45 @@ p{
 .container{
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
 }
 
-h2{
+.font{
     font-size: 15px;
     color: rgb(70,157,164);
     text-align-last: left;
+    font-size: 50px;
+}
+.letters{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+h4{
+    font-size: 55px;
+}
+.colors{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.color-two{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 185%;
+    height: 18vh;
+}
+.color-three{
+    border: 2px solid #469DA4;
+    border-radius: 50%;
+    width: 185%;
+    height: 18vh;
+    background-color: #469DA4;
+}
+.color-four{
+    border-radius: 50%;
+    width: 185%;
+    height: 18vh;
+    border: 2px solid #6B6B6B;
+    background-color:  #6B6B6B;
 }
