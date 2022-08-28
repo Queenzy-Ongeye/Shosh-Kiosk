@@ -1,4 +1,94 @@
-.user{
+/* .user{
     background-color: rgb(253,225,157);
     height: 100vh;
+    margin-top: -10%;
+    background-position: absolute;
+} */
+body{
+    background-color: rgb(253,225,157);
+}
+.card{
+    background-color: white;
+    width: 80%;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: -3px 3px rgba(0, 0, 0, 0.533);
+}
+.main{
+    display: flex;
+    justify-content: space-evenly;
+}
+h3{
+    color: rgb(70,157,164);
+}
+span{
+   color: rgb(70,157,164);
+}
+.form{
+    display: flex;
+    justify-content: space-evenly;
+}
+.sec-two{
+    margin-left: 5%;
+    text-align: left;
+}
+.email{
+    width: 150%;
+    height: 3.5vh;
+}
+.password{
+    width: 150%;
+    height: 3.5vh;
+}
+.input{
+    font-size: 0.8em;
+}
+.pass{
+    font-size: 0.8em;
+}
+p{
+    font-size: 16px;
+}
+.sec-three{
+    display: inline;
+}
+.icons{
+    font-size: 20px;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+.icon{
+    border: 2px solid rgba(0, 0, 0, 0.816);
+    padding: 6px;
+    margin: 6px;
+    border-radius: 50px;
+    color: rgba(7, 7, 7, 0.789);
+}
+.btn{
+    width: 150%;
+    height: 5vh;
+    background-color: rgb(70,157,164);
+    border: none;
+    color: white;
+    font-size: 1.2em;
+}
+.or{
+    text-align: center;
+}
+.side-img{
+    margin-left: 15%;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2{
+    font-size: 15px;
+    color: rgb(70,157,164);
+    text-align-last: left;
 }
