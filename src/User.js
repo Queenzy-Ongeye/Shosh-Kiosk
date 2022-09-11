@@ -1,13 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaFacebook } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import images from "./images/girl.png"
 import "./User.css"
+import Navbar from './Navbar';
+import Email from './Email';
+
 
 const User = () => {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [cls, setCls] = useState("green");
+
+    const handleSubmit = () => {
+        const data = {
+            'email': email,
+            'password': password
+        }
+        alert(JSON.stringify(data));
+    }
+
+
     return (
         <div className="user">
+            <style>{`
+                .red {background-color: rgb(70,157,164)}
+                .green {background-color: crimson;}
+            `}</style>
             <div className='card'>
                 <div className='main'>
                     <div className='eddie'>
@@ -21,23 +42,25 @@ const User = () => {
                     <div className='sec-one'>
                         <h2>Welcome Back</h2>
                         <div className='sec-two'>
-                            <p>Your email</p>
-                            <input type="text" placeholder="name@domain.com" className='email' />
-
-                            <p>Password</p>
-                            <input type="text" placeholder="at least 8 characters" className='password' />
-
-                            <div className='sec-three'>
-                                <div className='input'>
-                                    <input type="checkbox" /> Keep me logged in
+                            <form onSubmit={handleSubmit}>
+                                <p>Your email</p>
+                                <input type="text" placeholder="name@domain.com" className='email' value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                                <p>Password</p>
+                                <input type="text" placeholder="at least 8 characters" className='password' value={password} onChange={(e) => { setPassword(e.target.value) }} />
+                                <div className='sec-three'>
+                                    <div className='input'>
+                                        <input type="checkbox" /> Keep me logged in
+                                    </div>
+                                    <div>
+                                        <p className='pass'>Forgot password?</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className='pass'>Forgot password?</p>
-                                </div>
-                            </div>
 
-                            <button type="submit" className="btn btn-primary">Login</button>
-                            <p className="or">or</p>
+                                <button type="submit" className={cls}
+                                    onClick={() => setCls((cls) => (cls === "red" ? "green" : "red"))}>Login</button>
+                            </form>
+
+                            <p className="or"><hr />or</p>
                             <div className="icons">
                                 <FaFacebook className="icon" />
                                 <FaGoogle className="icon" />
@@ -51,45 +74,11 @@ const User = () => {
                     </div>
 
                 </div>
-            </div>
-
-
-            <div className="container">
-                <h2 className='font'>Fonts</h2>
-
-                <div className="letters">
-                    <div className="one">
-                        <h4>Aa</h4>
-                        <p className="robo">Roboto Regular</p>
-                    </div>
-
-                    <div className="two">
-                        <h4>Aa</h4>
-                        <p className="robo"> Roboto Medium</p>
-                    </div>
-                </div>
-
-                <h2 className='font'>Colors</h2>
-                <div className="colors">
-                    <div className="color">
-                        <div className="color-two"></div>
-                        #FDE19D
-                    </div>
-
-                    <div className="color">
-                        <div className="color-three"></div>
-                        #469DA4
-                    </div>
-
-                    <div className="color">
-                        <div className="color-four"></div>
-                        #6B6B6B
-                    </div>
-                </div>
+                {email ? <Navbar email={email} /> : <Email />}
 
             </div>
-
         </div>
+
     )
 }
 export default User;
